@@ -20,16 +20,17 @@ export default function Home() {
   const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src*="oneko.js"]');
+    if (existingScript) {
+      return;
+    }
+
     // Add oneko cat
     const script = document.createElement('script');
     script.src = 'https://raw.githack.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.js';
     script.async = true;
     document.body.appendChild(script);
-    
-    // Set oneko to cat variant (default)
-    const nekoEl = document.createElement('div');
-    nekoEl.id = 'oneko';
-    document.body.appendChild(nekoEl);
 
     // Try autoplay first
     const attemptAutoplay = () => {
@@ -67,9 +68,9 @@ export default function Home() {
       if (script.parentNode) {
         script.parentNode.removeChild(script);
       }
-      if (nekoEl && nekoEl.parentNode) {
-        nekoEl.parentNode.removeChild(nekoEl);
-      }
+      // Remove any oneko elements
+      const nekoElements = document.querySelectorAll('#oneko');
+      nekoElements.forEach(el => el.remove());
     };
   }, [hasInteracted]);
 
@@ -83,9 +84,21 @@ export default function Home() {
       setIsPlaying(!isPlaying);
     }
   };
+
+  const handlePageClick = () => {
+    if (!hasInteracted && audioRef.current) {
+      audioRef.current.play()
+        .then(() => {
+          setIsPlaying(true);
+          setHasInteracted(true);
+        })
+        .catch(() => {});
+    }
+  };
+
   return (
    <>
-   <div className="min-h-screen w-full bg-white dark:bg-black relative">
+   <div className="min-h-screen w-full bg-white dark:bg-black relative" onClick={handlePageClick}>
   {/* Light Mode - Noise Texture (Darker Dots) Background */}
   <div
     className="absolute inset-0 z-0 dark:hidden"
