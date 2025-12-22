@@ -171,59 +171,63 @@ export default function Home() {
         <div className="mx-auto max-w-2xl px-4 md:px-6 lg:px-8 mt-8">
           <div className="rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white/95 dark:bg-neutral-950/70 backdrop-blur-md shadow-xl p-8 md:p-12">
             {/* Content with profile */}
-            <div className="flex items-start justify-between gap-6">
+            <div className="flex items-center justify-between gap-8 md:gap-10">
               {/* Left side - Text */}
-              <div className="flex-1">
-                    <TextShimmer
-                      as="p"
-                      className="text-lg font-medium"
-                      duration={2.2}
-                      spread={1.2}
-                    >
-                      Hello there....
-                    </TextShimmer>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mt-1">
-                  Kartikeya
-                </h1>
+              <div className="flex-1 space-y-2">
+                <SlideInLeft delay={0.1}>
+                  <TextShimmer
+                    as="p"
+                    className="text-base md:text-lg font-medium text-neutral-700 dark:text-neutral-300"
+                    duration={2.2}
+                    spread={1.2}
+                  >
+                    Hey there
+                  </TextShimmer>
+                </SlideInLeft>
+
+                <SlideInLeft delay={0.2}>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white leading-tight">
+                    Kartikeya
+                  </h1>
+                </SlideInLeft>
                 
                 <FadeInText delay={0.3}>
-                  <div className="flex flex-wrap items-center mt-3 gap-2 sm:gap-4 text-sm md:text-base text-neutral-600 dark:text-neutral-300">
-                  <span>20, he/him</span>
-                  <span className="hidden sm:inline" aria-hidden="true">{"||"}</span>
-                  <span className="max-w-[38ch]">
-                    <Typewriter
-                    text={[
-                      "Indie Dev",
-                      "Full Stack Developer",
-                      "Product Engineer",
-                      "App Dev",
-                    ]}
-                    speed={90}
-                    waitTime={2000}
-                    deleteSpeed={80}
-                    cursorChar="|"
-                    showCursor={true}
-                    />
-                    {" from India."}
-                  </span>
+                  <div className="flex flex-wrap items-center gap-2 md:gap-3 text-sm md:text-base text-neutral-600 dark:text-neutral-350 pt-1">
+                    <span className="font-medium">20</span>
+                    <span className="text-neutral-400 dark:text-neutral-600">•</span>
+                    <span>
+                      <Typewriter
+                        text={[
+                          "Indie Dev",
+                          "Full Stack Developer",
+                          "Product Engineer",
+                          "App Dev",
+                        ]}
+                        speed={90}
+                        waitTime={2000}
+                        deleteSpeed={80}
+                        cursorChar="|"
+                        showCursor={true}
+                      />
+                    </span>
                   </div>
                 </FadeInText>
 
                 <SlideInRight delay={0.4}>
-                  <div className="mt-5 flex flex-wrap items-center gap-2 sm:gap-4">
+                  <div className="mt-6 flex flex-wrap items-center gap-2 md:gap-3">
                     <a
                       href="https://drive.google.com/file/d/1FFshZ2pNCnmxSa-fjvF1gmAWBTu9fO5_/view?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="View Resume"
-                      className="h-7 px-4 rounded-md bg-neutral-900 text-white shadow-sm hover:bg-neutral-800 hover:shadow-md dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-white inline-flex items-center justify-center text-xs font-semibold transition-all duration-200"
+                      className="px-4 py-2 rounded-lg bg-neutral-900 text-white text-xs md:text-sm font-semibold shadow-md hover:bg-neutral-800 hover:shadow-lg dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-white transition-all duration-200"
                     >
                       Resume
                     </a>
                     <a
                       href="mailto:samudralakartikeya@gmail.com"
                       aria-label="Send email"
-                      className="h-7 w-7 rounded-md border border-neutral-300 p-0 text-neutral-700 hover:bg-neutral-100 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:border-neutral-600 inline-flex items-center justify-center transition-all duration-200"
+                      className="h-8 w-8 rounded-lg border border-neutral-300 p-0 text-neutral-600 hover:bg-neutral-100 hover:border-neutral-400 hover:text-neutral-900 dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-800/50 dark:hover:border-neutral-500 dark:hover:text-neutral-200 inline-flex items-center justify-center transition-all duration-200"
                     >
                       <Mail className="h-4 w-4" />
                     </a>
@@ -232,7 +236,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Follow me on X (Twitter)"
-                      className="h-7 w-7 rounded-md border border-neutral-300 p-0 text-neutral-700 hover:bg-neutral-100 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:border-neutral-600 inline-flex items-center justify-center transition-all duration-200"
+                      className="h-8 w-8 rounded-lg border border-neutral-300 p-0 text-neutral-600 hover:bg-neutral-100 hover:border-neutral-400 hover:text-neutral-900 dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-800/50 dark:hover:border-neutral-500 dark:hover:text-neutral-200 inline-flex items-center justify-center transition-all duration-200"
                     >
                       <Twitter className="h-4 w-4" aria-hidden="true" />
                     </a>
@@ -241,7 +245,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="View my GitHub profile"
-                      className="h-7 w-7 rounded-md border border-neutral-300 p-0 text-neutral-700 hover:bg-neutral-100 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:border-neutral-600 inline-flex items-center justify-center transition-all duration-200"
+                      className="h-8 w-8 rounded-lg border border-neutral-300 p-0 text-neutral-600 hover:bg-neutral-100 hover:border-neutral-400 hover:text-neutral-900 dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-800/50 dark:hover:border-neutral-500 dark:hover:text-neutral-200 inline-flex items-center justify-center transition-all duration-200"
                     >
                       <Github className="h-4 w-4" aria-hidden="true" />
                     </a>
@@ -250,7 +254,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Connect with me on LinkedIn"
-                      className="h-7 w-7 rounded-md border border-neutral-300 p-0 text-neutral-700 hover:bg-neutral-100 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:border-neutral-600 inline-flex items-center justify-center transition-all duration-200"
+                      className="h-8 w-8 rounded-lg border border-neutral-300 p-0 text-neutral-600 hover:bg-neutral-100 hover:border-neutral-400 hover:text-neutral-900 dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-800/50 dark:hover:border-neutral-500 dark:hover:text-neutral-200 inline-flex items-center justify-center transition-all duration-200"
                     >
                       <Linkedin className="h-4 w-4" aria-hidden="true" />
                     </a>
@@ -259,17 +263,19 @@ export default function Home() {
               </div>
               
               {/* Right side - Profile Image */}
-              <div className="flex-shrink-0">
-                <div className="relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28">
-                  <Image
-                    src="/images/profile.png"
-                    alt="Kartikeya's profile picture"
-                    fill
-                    priority
-                    className="rounded-full object-cover border-2 border-neutral-300 dark:border-neutral-600 shadow-sm"
-                  />
+              <SlideInRight delay={0.15}>
+                <div className="flex-shrink-0">
+                  <div className="relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36">
+                    <Image
+                      src="/images/profile.png"
+                      alt="Kartikeya's profile picture"
+                      fill
+                      priority
+                      className="rounded-full object-cover border-3 border-neutral-200 dark:border-neutral-600 shadow-lg"
+                    />
+                  </div>
                 </div>
-              </div>
+              </SlideInRight>
 
 
             </div>
