@@ -126,7 +126,7 @@ export default function Home() {
           <div className="flex w-full items-center justify-between rounded-xl border border-neutral-200 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-950/80">
             <Link
               href="/"
-              className="font-semibold text-lg sm:text-xl text-neutral-900 dark:text-neutral-50 transition-colors hover:text-neutral-600 dark:hover:text-neutral-300"
+              className="font-serif font-semibold text-lg sm:text-xl text-neutral-900 dark:text-neutral-50 transition-colors hover:text-neutral-600 dark:hover:text-neutral-300"
             >
               Kartikeya
             </Link>
