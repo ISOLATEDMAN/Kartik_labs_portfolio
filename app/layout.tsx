@@ -24,6 +24,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kartikdev.vercel.app"),
   title: "Kartikeya - Full Stack Indie Developer",
   description: "Portfolio of Kartikeya Samudrala, a 20-year-old Full Stack Developer and Product Engineer from India. Specializing in mobile apps, web applications, and AI-powered solutions.",
   keywords: ["Full Stack Developer", "Product Engineer", "React", "Next.js", "Flutter", "Firebase", "AI Development", "Portfolio"],

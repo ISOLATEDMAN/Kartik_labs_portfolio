@@ -354,18 +354,18 @@ export default function Home() {
                       title="Quick Valid. AI"
                       links={[
                         {
-                          label: "play store ↗",
+                          label: "play store",
                           url: "https://play.google.com/store/apps/details?id=com.kartikships.quickvalidaiapp&hl=en_US",
                         },
                         {
-                          label: "website ↗",
+                          label: "website",
                           url: "https://quickvalidai.framer.website",
                         },
                       ]}
                       bullets={[
-                        "AI-powered mobile app launched on Google Play Store with 200+ users and $3 MRR, helping entrepreneurs validate business ideas with real-time semantic analysis.",
-                        "Architected complete backend on Firebase with secure authentication, Firestore database, and Cloud Functions for credit-based API system.",
-                        "Integrated OpenAI and Gemini APIs to provide data-driven viability scores and actionable insights.",
+                        "200+ users, $3 MRR — AI-powered business validation on Google Play Store",
+                        "Firebase backend with secure auth, Firestore, Cloud Functions",
+                        "OpenAI + Gemini APIs for real-time semantic analysis",
                       ]}
                       tags={["Flutter", "Firebase", "OpenAI API", "Cloud Functions", "Gemini API"]}
                     />
@@ -376,18 +376,18 @@ export default function Home() {
                       showBuilding={true}
                       links={[
                         {
-                          label: "live preview ↗",
+                          label: "live preview",
                           url: "https://agenix-site-landing-site.vercel.app/",
                         },
                         {
-                          label: "github ↗",
+                          label: "github",
                           url: "https://agenix-site-landing-site.vercel.app/",
                         },
                       ]}
                       bullets={[
-                        "Built an AI Agents orchestration system using LangChain with shared context, translating dialogues into actionable tasks.",
-                        "Developed proprietary collaboration framework allowing agents to delegate assignments and resolve ambiguities autonomously.",
-                        "Built full-stack solution with Python-based AI engine (OpenAI/Gemini) and Next.js task-validation dashboard.",
+                        "AI Agents orchestration with LangChain — autonomous dialogue-to-tasks",
+                        "Proprietary multi-agent collaboration framework with delegation & resolution",
+                        "Full-stack: Python AI engine + Next.js task-validation dashboard",
                       ]}
                       tags={[
                         "Next.js",
