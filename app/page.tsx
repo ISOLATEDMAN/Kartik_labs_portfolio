@@ -12,6 +12,7 @@ import { AchievementItem } from "@/components/acheivments";
 import { ProjectListItem } from "@/components/project-list-item";
 import { Button } from "@/components/ui/button";
 import { Dock } from "@/components/dock";
+import { AgeCounter } from "@/components/age-counter";
 import { useState, useRef, useEffect } from "react";
 
 export default function Home() {
@@ -193,7 +194,7 @@ export default function Home() {
                 
                 <FadeInText delay={0.3}>
                   <div className="flex flex-wrap items-center gap-2 md:gap-3 text-sm md:text-base text-neutral-600 dark:text-neutral-350 pt-1">
-                    <span className="font-medium">20</span>
+                    <AgeCounter />
                     <span className="text-neutral-400 dark:text-neutral-600">•</span>
                     <span>
                       <Typewriter
