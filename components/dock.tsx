@@ -14,7 +14,7 @@ export function Dock() {
     {
       icon: Twitter,
       label: "Follow on Twitter",
-      href: "https://x.com/KARTIKEYA_S_1",
+      href: "https://x.com/krtk_labs",
       external: true,
     },
     { icon: Github, label: "View GitHub", href: "https://github.com/ISOLATEDMAN", external: true },
