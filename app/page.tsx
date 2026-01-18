@@ -233,7 +233,7 @@ export default function Home() {
                       <Mail className="h-4 w-4" />
                     </a>
                     <a
-                      href="https://x.com/KARTIKEYA_S_1"
+                      href="https://x.com/krtk_labs"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Follow me on X (Twitter)"
@@ -537,7 +537,7 @@ export default function Home() {
                 <SlideInRight delay={0.1}>
                   <div className="mt-4 flex items-center justify-center gap-2 sm:gap-4 text-neutral-600 dark:text-neutral-300">
                     <a
-                      href="https://x.com/KARTIKEYA_S_1"
+                      href="https://x.com/krtk_labs"
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Twitter"
