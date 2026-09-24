@@ -199,8 +199,10 @@ export default function Home() {
                     <span>
                       <Typewriter
                         text={[
+                          "SDE 1 @ 1000xDevs",
                           "Indie Dev",
                           "Full Stack Developer",
+                          "AI Engineer",
                           "Product Engineer",
                           "App Dev",
                         ]}
@@ -217,7 +219,7 @@ export default function Home() {
                 <SlideInRight delay={0.4}>
                   <div className="mt-6 flex flex-wrap items-center gap-2 md:gap-3">
                     <a
-                      href="https://drive.google.com/file/d/1FFshZ2pNCnmxSa-fjvF1gmAWBTu9fO5_/view?usp=sharing"
+                      href="/resume/Kartikeya_26.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="View Resume"
@@ -289,8 +291,8 @@ export default function Home() {
                   <span className="rounded-md bg-yellow-200 dark:bg-yellow-400/90 px-2 py-1 text-sm font-semibold text-neutral-900 dark:text-black">
                     products, apps, and solutions.
                   </span>{" "}
-                  With over a year of hands-on experience working with product and SaaS-based companies, 
-                  I'm currently balancing a full-time job while pursuing my passion as an indie developer.
+                  Currently an SDE 1 at 1000xDevs building agentic products like Save8.ai (40K+ downloads),
+                  while shipping my own indie products on the side — from AI apps to agent backends.
                 </p>
               </section>
             </FadeInText>
@@ -308,9 +310,9 @@ export default function Home() {
                     <WorkItem
                       icon="building"
                       company="1000xdevs"
-                      role="Associate Software Intern"
+                      role="SDE 1"
                       period="October 2025 – Present"
-                      summary="Working on cutting-edge software development projects, contributing to scalable solutions and learning from industry experts."
+                      summary="Core-built Save8.ai, an agentic marketplace (40K+ downloads) — backend agent + scraping pipeline, Razorpay gift card marketplace, and a dynamic linking system for referrals. Also shipped Bartr (NestJS, React Native), Astronode (LangGraph + vector DB), and an ops admin portal (Django, Next.js)."
                       logoUrl="/images/companies/1000x-logo.png.webp"
                       showActiveStatus={true}
                     />
@@ -319,9 +321,9 @@ export default function Home() {
                     <WorkItem
                       icon="building"
                       company="Starkins Solutions"
-                      role="Full Stack App Developer"
+                      role="Full Stack Developer Intern"
                       period="February 2025 – May 2025"
-                      summary="Developed full-stack applications, implementing end-to-end features and optimizing performance for client projects."
+                      summary="Led a 4-member team to deliver 3+ full-stack apps, including KisanMartTools (Flutter/Express.js) and the Social DC portfolio platform, managing end-to-end deployment on a private VPS."
                       logoUrl="/images/companies/starkins.png"
                     />
                   </SlideInLeft>
@@ -352,7 +354,25 @@ export default function Home() {
                 <div className="space-y-6">
                   <SlideInLeft delay={0.2}>
                     <ProjectListItem
-                      title="Quick Valid. AI"
+                      title="MirrorCut"
+                      showBuilding={true}
+                      links={[
+                        {
+                          label: "website",
+                          url: "https://www.mirrorcut.app",
+                        },
+                      ]}
+                      bullets={[
+                        "AI haircut preview — see a new cut on your own photo before you sit in the chair",
+                        "Generates a barber-ready instruction card so the barber knows exactly what to do",
+                        "Web-first with credit-pack monetization; Next.js + NestJS + Supabase + Replicate",
+                      ]}
+                      tags={["Next.js", "NestJS", "Supabase", "Replicate", "TypeScript"]}
+                    />
+                  </SlideInLeft>
+                  <SlideInLeft delay={0.3}>
+                    <ProjectListItem
+                      title="QuickValid.AI"
                       links={[
                         {
                           label: "play store",
@@ -364,40 +384,48 @@ export default function Home() {
                         },
                       ]}
                       bullets={[
-                        "200+ users, $3 MRR — AI-powered business validation on Google Play Store",
-                        "Firebase backend with secure auth, Firestore, Cloud Functions",
-                        "OpenAI + Gemini APIs for real-time semantic analysis",
+                        "AI startup-validation app on Play Store — 120+ users, 40+ DAU, first paying customers ($3 MRR)",
+                        "LangGraph + NestJS engine runs risk, market & competitor analysis in parallel, grounded with Tavily + store scrapers, streamed via SSE",
+                        "Credit-based IAP with Google Play Billing — server-verified purchase tokens, credits granted in Firestore transactions",
                       ]}
-                      tags={["Flutter", "Firebase", "OpenAI API", "Cloud Functions", "Gemini API"]}
+                      tags={["Flutter", "NestJS", "LangGraph", "Firebase", "Gemini", "Tavily"]}
                     />
                   </SlideInLeft>
-                  <SlideInLeft delay={0.3}>
+                  <SlideInLeft delay={0.4}>
                     <ProjectListItem
                       title="Agenix"
-                      showBuilding={true}
                       links={[
                         {
-                          label: "live preview",
+                          label: "website",
                           url: "https://agenix-site-landing-site.vercel.app/",
                         },
                         {
                           label: "github",
-                          url: "https://agenix-site-landing-site.vercel.app/",
+                          url: "https://github.com/ISOLATEDMAN/agenix-server",
                         },
                       ]}
                       bullets={[
-                        "AI Agents orchestration with LangChain — autonomous dialogue-to-tasks",
-                        "Proprietary multi-agent collaboration framework with delegation & resolution",
-                        "Full-stack: Python AI engine + Next.js task-validation dashboard",
+                        "Open-source autonomous AI agent connecting Slack to Jira — creates tickets, assigns owners, transitions status",
+                        "Semantic ticket search with pgvector; custom agent orchestration (tool registry, runner, memory) on Gemini function calling",
+                        "Tenant-scoped multi-workspace setup with Slack/Jira OAuth 2.0 and AES-256-GCM token encryption",
                       ]}
-                      tags={[
-                        "Next.js",
-                        "Nest.js",
-                        "LangChain",
-                        "AI Agents",
-                        "OpenAI API",
-                        "Gemini API",
+                      tags={["NestJS", "TypeScript", "Gemini", "PostgreSQL", "pgvector", "Drizzle ORM"]}
+                    />
+                  </SlideInLeft>
+                  <SlideInLeft delay={0.5}>
+                    <ProjectListItem
+                      title="Grounded RAG Assistant"
+                      links={[
+                        {
+                          label: "github",
+                          url: "https://github.com/ISOLATEDMAN/rag_assignment",
+                        },
                       ]}
+                      bullets={[
+                        "End-to-end RAG pipeline: heading-based chunking, nomic-embed-text via Ollama, ChromaDB, Qwen answers with inline citations",
+                        "Passed a 12-question eval suite — grounding, conflicting sources, refusals, ambiguity and prompt-injection defense",
+                      ]}
+                      tags={["Python", "FastAPI", "Ollama", "Qwen", "ChromaDB"]}
                     />
                   </SlideInLeft>
                 </div>
